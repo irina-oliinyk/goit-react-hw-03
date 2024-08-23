@@ -11,11 +11,17 @@ function App() {
   const filterTasck = contact.filter(contact =>
     contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
   );
+  const addContact = newContact => {
+    setContact(prevContact => {
+      return [...prevContact, newContact];
+    });
+  };
+  const deleteContact = contactId => {};
 
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm setContact={setContact} />
+      <ContactForm addContact={addContact} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={filterTasck} />
     </div>

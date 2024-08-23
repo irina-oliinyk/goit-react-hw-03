@@ -26,3 +26,8 @@
   height: 50px;
   background-color: blueviolet;
 }
+
+.error {
+  font-size: 20px;
+  color: red;
+}
