@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm setContact={setContact} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={filterTasck} />
     </div>
