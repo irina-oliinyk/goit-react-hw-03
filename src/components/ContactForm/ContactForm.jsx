@@ -8,11 +8,11 @@ export default function ContactForm({ addContact }) {
   const FeedbackSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, 'Too Short!')
-      .max(50, 'Too Long!')
+      .max(50, 'Too Long! (Max.50!)')
       .required('Required'),
     number: Yup.string()
       .min(3, 'Too Short!')
-      .max(50, 'Too Long!')
+      .max(50, 'Too Long! (Max.50!)')
       .required('Required'),
   });
 
